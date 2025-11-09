@@ -26,7 +26,6 @@ public:
         QLabel *cdLabel = new QLabel("Select CD:");
         QComboBox *cdCombo = new QComboBox;
 
-        // Загружаем все CD из базы
         QSqlQuery query("SELECT cd_id, cd_title FROM cd");
         while(query.next()) {
             int id = query.value(0).toInt();

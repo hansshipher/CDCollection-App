@@ -18,7 +18,7 @@ public:
         : QWidget(parent)
     {
         setWindowTitle("Add Artist");
-        setFixedSize(300, 200); // фиксированный размер окна
+        setFixedSize(300, 200);
 
         QVBoxLayout *vl = new QVBoxLayout(this);
 
@@ -58,7 +58,7 @@ public:
             }
 
             QMessageBox::information(this, "Success", "Artist saved successfully!");
-            close(); // закрываем окно после успешного сохранения
+            close();
         });
     }
 };

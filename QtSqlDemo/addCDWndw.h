@@ -26,7 +26,6 @@ public:
         QLabel *artistLabel = new QLabel("Select artist:");
         QComboBox *artistCombo = new QComboBox;
 
-        // Загружаем всех артистов из базы
         QSqlQuery query("SELECT artist_id, name FROM artist");
         while(query.next()) {
             int id = query.value(0).toInt();
